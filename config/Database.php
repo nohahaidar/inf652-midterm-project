@@ -1,7 +1,7 @@
 <?php
     class Database {
         private $host;
-        private $db_name;
+        private $dbname;
         private $username;
         private $password;
         private $conn;
@@ -18,7 +18,7 @@
                 return $this->conn;
             } else {
 
-            $dsn = "pgsql:host={$this->host};dbname={$this->db_name}";
+            $dsn = "pgsql:host={$this->host};dbname={$this->dbname}";
 
             try {
                 $this->conn = new PDO ($dsn, $this->username, $this->password);
