@@ -11,10 +11,10 @@
     $db = $database->connect();
 
     // Instantiate blog author object
-    $post = new Author($db);
+    $author = new Author($db);
 
     // Blog author query
-    $result = $authors->read();
+    $result = $author->read();
     //Get row count
     $num = $result->rowCount();
 
@@ -29,10 +29,7 @@
 
             $author_item = array(
                 'id' => $id,
-                'title' => $title,
-                'author' => $author,
-                'category_id' => $category_id,
-                'category_name' => $category_name
+                'author' => $author
             );
 
             // Push to "data"
